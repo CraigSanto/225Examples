@@ -1,5 +1,3 @@
-#include "hypercube.h"
-
 //Example Idea: Write operator< that compares the Dim values of 2 hypercubes
 //Practice Idea: Write a method that returns the number of edges
 
@@ -34,7 +32,7 @@ template <int Dim>
 void Hypercube<Dim>::copy(Hypercube const & other){
 	edge = other.edge;
 	numFaces = other.numFaces;
-	name = new string(other.name);
+	name = new string(*(other.name));
 }
 
 template <int Dim>

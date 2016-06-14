@@ -12,7 +12,7 @@ $(EXENAME) : $(OBJS)
 	$(LD) $(OBJS) $(LDFLAGS) -o $(EXENAME)
 
 main.o : main.cpp hypercube.h hypercube.cpp
-	$(CXX) $(CXXFLAGS) main.o main.cpp
+	$(CXX) $(CXXFLAGS) main.cpp
 
 clean :
 	-rm -f *.o $(EXENAME)

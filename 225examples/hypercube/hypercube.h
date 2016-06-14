@@ -31,5 +31,5 @@ class Hypercube{
 	*Using a pointer to showcase dynamic memory
 	*/
 };
-
+#include "hypercube.cpp"
 #endif
