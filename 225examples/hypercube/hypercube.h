@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 using std::string;
 using std::cout;
 using std::endl;
@@ -19,12 +20,12 @@ class Hypercube{
 	void setName(string n);
 	string getName();
 	double getHyperVol();
-	int getNumFaces();
+	int getNumEdges();
      private:
 	void clear();
 	void copy(Hypercube<Dim> const & other);
 	double edge;
-	int numFaces;
+	int numEdges;
 	string * name; 
 	/* I don't want to distract from the main point of the example -
 	*instead of naming all faces, the hypercube itself will be named.

@@ -1,8 +1,5 @@
 //Example Idea: Write operator< that compares the Dim values of 2 hypercubes
-//Practice Idea: Write a method that returns the number of edges
 
-
-//I'm not quite sure how to do the makefile for this one.
 template <int Dim>
 Hypercube<Dim>::Hypercube(double e, string n) {
 	edge = e;
@@ -31,7 +28,6 @@ Hypercube<Dim> & Hypercube<Dim>::operator=(Hypercube<Dim> const & rhs){
 template <int Dim>
 void Hypercube<Dim>::copy(Hypercube const & other){
 	edge = other.edge;
-	numFaces = other.numFaces;
 	name = new string(*(other.name));
 }
 
@@ -57,7 +53,7 @@ double Hypercube<Dim>::getHyperVol() {
 }
 
 template <int Dim>
-int Hypercube<Dim>::getNumFaces() {return numFaces;}
+int Hypercube<Dim>::getNumEdges() {return pow(Dim, 2);}
 
 template <int Dim>
 void Hypercube<Dim>::setName(string n){
@@ -66,5 +62,5 @@ void Hypercube<Dim>::setName(string n){
 }
 
 template <int Dim>
-string Hypercube<Dim>::getName() {return name;}
+string Hypercube<Dim>::getName() {return *name;}
 
