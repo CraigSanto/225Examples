@@ -15,9 +15,13 @@ using namespace std;
  * we try to delete q - we are attempting to free up already free memory.
  *
  * After reallocating p, when we run the exe by itself both p and q become 4 -
- * but if we run it with valgrind, we see that [ is 4, but q is 8. 
+ * but if we run it with valgrind, we see that p is 4, but q is 8. 
  * This behavior makes q a DANGLING POINTER. And it's safest to set it to null
  * before we touch it again.
+ *
+ * K: I'm really confused with what you mean in the previous paragraph. with the
+ * code below, the second time we new p and new q wouldn't p be 4 and q would also be 4?
+ * and then q get's incremented to 5?
  *
  * Experiment with this code! Comment/uncomment lines and run with/without
  * valgrind to get a feel for what can go wrong!

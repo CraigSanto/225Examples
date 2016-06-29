@@ -19,7 +19,7 @@ int main(){
 	int x[5];
 	int xLen = 5;
 	//for(int i = 0; i < xLen; i++) x[i] = i;
-	printArr(x, xLen);
+	printArr(x, xLen);                          //K: maybe explain that the name of the array is the same as the address of the first element, which is why we can pass in an array name as an int * paramter
 	int a = 4;
 	int y[a];
 	//for(int i = 0; i < a; i++) y[i] = i*2;

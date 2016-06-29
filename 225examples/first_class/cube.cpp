@@ -20,7 +20,7 @@ class Cube{
 }; //NEVER forget the semicolon after class declarations!
 
 //member function declaration
-//Cube:: is the resolution operator 
+//Cube:: is the resolution operator                         K: :: is scope resolution operator, Cube:: makes it seem like Cube is part of the operator 
 //It tells the compiler what these methods belong to.
 Cube::Cube(double e) {edge = e;}
 

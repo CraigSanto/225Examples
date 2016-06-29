@@ -14,6 +14,13 @@ using namespace std;
  * concern - we have given control of that memory location back to the system.
  */
 
+// K: I wouldn't use the term "empties" for when you free memory, it simply frees it so the system can use it for other things. The same value (2 in this case) could remain in that mem location for the rest of the program. For example, when I ran the code, my output was:
+//2
+//2
+//2
+//4
+//You might want to also mention the code below leads to undefined behavior.
+
 int main(){
 	int c = 2;
 	int * d = new int(c);

@@ -6,7 +6,7 @@ int main(){
 	int * x = new int(1); //Points to an integer stored on the HEAP
 	cout << *x << endl;
 
-	int * y; //Points to an integer stored on the STACK
+	int * y; //Points to an integer stored on the STACK     // K: currently points to nothing, might want to move that comment down 2 lines
 	int a = 2;
 	y = &a;
 	cout << *y << endl;
