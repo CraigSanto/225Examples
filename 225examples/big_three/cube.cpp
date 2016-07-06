@@ -13,14 +13,17 @@ Cube::Cube(double e) {
 }
 
 Cube::Cube(Cube const & other){
+	cout << "Copy constructor called" << endl;
 	copy(other);
 }
 
 Cube::~Cube(){
+	cout << "Destructor called" << endl;
 	clear();
 }
 
 Cube & Cube::operator=(Cube const & rhs){
+	cout << "Operator= called" << endl;
 	if(this != &rhs){
 		clear();
 		copy(rhs);

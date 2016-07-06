@@ -12,8 +12,17 @@ int main(){
      cout << "Cube b's faces: " << endl;
      b.printFaces();
      Cube * c = new Cube(2);
+     cout << c->getVol() << endl;
      delete c;
      c = NULL;
+     c = new Cube(a);
+     cout << c->getVol() << endl;
+     delete c;
+     c = NULL;
+     b.setEdge(4);
+     Cube d; //If we say "Cube d = b;" instead, the Copy Constructor is called!
+     d = b;
+     cout << b.getVol() << "=" << d.getVol() << endl;
      return 0;
 }
 //No more errors!
