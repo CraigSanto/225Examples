@@ -8,8 +8,8 @@ using namespace std;
 //Is what we do here wrong? Not inherently. It depends on our goal.
 void test1(){
 	int x = 7;
-	int &p = x;
-	p = 14;
+	int &w = x;
+	w = 14;
 	cout << x << endl;
 }
 
@@ -18,8 +18,8 @@ void test1(){
 //"Read-only variable is not assignable"
 /*void test2(){
 	int x = 7;
-	const int &p = x;
-	p = 14;
+	const int &w = x;
+	w = 14;
 	cout << x << endl;
 }*/
 
@@ -28,15 +28,18 @@ void test1(){
 //Use this power carefully!
 void test3(){
 	int x = 7;
-	const int &p = x;
+	const int &w = x;
 	x = 14;
 	cout << x << endl;
-	cout << p << endl;
+	cout << w << endl;
 }
 
 int main(){
+	cout << "Test 1:" << endl;
 	test1();
+	//cout << "Test 2:" << endl;
 	//test2();
+	cout << "Test 3:" << endl;
 	test3();
 
 	return 0;
