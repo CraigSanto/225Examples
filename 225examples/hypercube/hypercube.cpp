@@ -53,7 +53,7 @@ double Hypercube<Dim>::getHyperVol() {
 }
 
 template <int Dim>
-int Hypercube<Dim>::getNumEdges() {return pow(Dim, 2);}
+int Hypercube<Dim>::getNumEdges() {return Dim * pow(2, Dim-1);}
 
 template <int Dim>
 void Hypercube<Dim>::setName(string n){
